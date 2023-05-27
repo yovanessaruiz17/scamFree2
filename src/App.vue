@@ -7,10 +7,7 @@
         <router-link to="/Bares" class="nav-link">Bares</router-link>
       </div>
       <div class="container-fluid">
-        <form class="d-flex" role="search">
-          <router-link to="/Login" class="button">Log in</router-link>
-          <router-link to="/Register" class="button">Sign up</router-link>
-      </form>
+        <input type="button" value="ingrese">
   </div>
     </nav>
     <router-view class="container" />

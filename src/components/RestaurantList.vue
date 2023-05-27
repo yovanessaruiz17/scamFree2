@@ -14,12 +14,7 @@
       <h2>{{ selectedRestaurant.name }}</h2>    
       <p>{{ selectedRestaurant.description }}</p>
       <h4>Items:</h4>
-      <ul>
-        <li v-for="item in selectedRestaurant.items" :key="item.name">
-          <span>{{ item.name }}</span>
-          <span>{{ item.price }}</span>
-        </li>
-      </ul>
+      <p>{{ selectedRestaurant.items }}</p>
       <p>Phone: {{ selectedRestaurant.phone }}</p>
       <p>Address: {{ selectedRestaurant.address }}</p>
     </div>

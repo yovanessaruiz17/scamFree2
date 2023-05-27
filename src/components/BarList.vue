@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul>
-      <li v-for="bar in bars" :key="bar.name" @click="selectBar(bar)" :class="{ active: selectedBar === bar }">
+      <li v-for="bar in bars" :key="bar.id_bares" @click="selectBar(bar)" :class="{ active: selectedBar === bar }">
         <h3>{{ bar.name }}</h3>
         <p>{{ bar.description }}</p>
       </li>
@@ -13,12 +13,7 @@
       </figure>
       <p>{{ selectedBar.description }}</p>
       <h4>Items:</h4>
-      <ul>
-        <li v-for="item in selectedBar.items" :key="item.name">
-          <span>{{ item.name }}</span>
-          <span>{{ item.price }}</span>
-        </li>
-      </ul>
+      <p>{{ selectedBar.items }}</p>
       <p>Phone: {{ selectedBar.phone }}</p>
       <p>Address: {{ selectedBar.address }}</p>
     </div>

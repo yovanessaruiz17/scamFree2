@@ -1,7 +1,8 @@
-const { get } = require('core-js/core/dict');
 const express = require('express');
 const mysql = require('mysql');
-import axios from "axios"
+const cors = require('cors');
+const app =express();
+app.use(cors());
 
 // Configuración de la base de datos
 const dbConfig = {
@@ -24,11 +25,11 @@ connection.connect((err) => {
 });
 
 // Crear una instancia de la aplicación Express
-const app = express();
+
 
 // Ruta de ejemplo para obtener datos de la base de datos
 app.get('/bars', (req, res) => {
-  // Consultar los usuarios en la base de datos
+  // Consultar los bares en la base de datos
   connection.query('SELECT * FROM bars', (err, rows) => {
     if (err) {
       console.error('Error al realizar la consulta:', err);
@@ -36,12 +37,13 @@ app.get('/bars', (req, res) => {
       return;
     }
 
-    // Enviar los datos de los usuarios como respuesta
+    // Enviar los datos de los bares como respuesta
     res.json(rows);
   });
 });
+
 app.get('/restaurants', (req, res) => {
-  // Consultar los usuarios en la base de datos
+  // Consultar los restaurantes en la base de datos
   connection.query('SELECT * FROM restaurants', (err, rows) => {
     if (err) {
       console.error('Error al realizar la consulta:', err);
@@ -49,7 +51,7 @@ app.get('/restaurants', (req, res) => {
       return;
     }
 
-    // Enviar los datos de los usuarios como respuesta
+    // Enviar los datos de los restaurantes como respuesta
     res.json(rows);
   });
 });
