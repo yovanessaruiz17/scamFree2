@@ -58,7 +58,7 @@ li.active {
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-  background-color: #fff;
+  background-color: #f5d5fc;
   color: #333;
   font-size: 1.2em;
 }

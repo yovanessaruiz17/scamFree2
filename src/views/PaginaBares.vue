@@ -24,6 +24,8 @@ export default {
       axios.get('http://localhost:3000/bars')
         .then(response => {
           this.bars = response.data;
+          
+          
         })
         .catch(error => {
           console.error('Error al obtener los datos de los bares:', error);

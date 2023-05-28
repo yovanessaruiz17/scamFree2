@@ -6,9 +6,6 @@
         <router-link to="/Restaurantes" class="nav-link">Restaurante</router-link>
         <router-link to="/Bares" class="nav-link">Bares</router-link>
       </div>
-      <div class="container-fluid">
-        <input type="button" value="ingrese">
-  </div>
     </nav>
     <router-view class="container" />
   </div>
@@ -26,12 +23,13 @@ export default {
 
 <style>
 /* Estilos para la barra de navegación */
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background: linear-gradient(rgb(39, 4, 195), rgb(251, 251, 251));
+  background: linear-gradient(rgb(151, 3, 250), rgb(214, 168, 245));
   color: #757070;
 }
 
@@ -39,7 +37,7 @@ export default {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: 2em;
   transition: transform 0.3s;
   font-family:cursive;
 
